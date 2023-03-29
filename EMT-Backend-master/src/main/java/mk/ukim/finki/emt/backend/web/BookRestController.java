@@ -52,7 +52,7 @@ public class BookRestController {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Book> delete(@PathVariable Long id){
         this.bookService.deleteById(id);
-        if(this.bookService.findById(id).isEmpty())
+        if(this.bookService.findById(id).isPresent())
             return ResponseEntity.ok().build();
         return ResponseEntity.badRequest().build();
     }
