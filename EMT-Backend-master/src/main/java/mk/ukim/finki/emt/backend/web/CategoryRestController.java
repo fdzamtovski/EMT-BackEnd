@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://emt-lab1and2.herokuapp.com/")
 @RequestMapping("/api/categories")
 public class CategoryRestController {
 
