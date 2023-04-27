@@ -20,4 +20,7 @@ public class Country {
     private String name;
 
     private String continent;
+
+    public Country(String name, String continent) {
+    }
 }

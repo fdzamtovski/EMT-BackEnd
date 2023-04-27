@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import mk.ukim.finki.emt.backend.model.Author;
 import mk.ukim.finki.emt.backend.model.Book;
 import mk.ukim.finki.emt.backend.model.dto.BookDto;
+import mk.ukim.finki.emt.backend.model.enumerations.Category;
 import mk.ukim.finki.emt.backend.model.exceptions.AuthorNotFoundException;
 import mk.ukim.finki.emt.backend.model.exceptions.BookNotFoundException;
 import mk.ukim.finki.emt.backend.repository.AuthorRepository;
@@ -79,5 +80,10 @@ public class BookServiceImpl implements BookService {
         book.setAvailableCopies(copies);
         this.bookRepository.save(book);
         return Optional.of(book);
+    }
+
+    @Override
+    public void create(String book1, Category drama, Author author, int i) {
+        bookRepository.save(new Book(book1, drama, author, i));
     }
 }

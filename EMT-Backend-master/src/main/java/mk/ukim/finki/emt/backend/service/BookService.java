@@ -1,7 +1,9 @@
 package mk.ukim.finki.emt.backend.service;
 
+import mk.ukim.finki.emt.backend.model.Author;
 import mk.ukim.finki.emt.backend.model.Book;
 import mk.ukim.finki.emt.backend.model.dto.BookDto;
+import mk.ukim.finki.emt.backend.model.enumerations.Category;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -23,4 +25,6 @@ public interface BookService {
     void deleteById(Long id);
 
     Optional<Book> take(Long id);
+
+    void create(String book1, Category drama, Author author, int i);
 }
